@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #00008bcb;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.wrapper .loader{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 10px;
+    gap: 12px;
+}
+.loader .loading {
+    background: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 10px;
+    /* use the correct animation name and include time unit (s) */
+    animation: load 0.8s ease-in-out infinite;
+}
+/* give each dot a slightly different duration so they bounce in sequence */
+.loader .loading.one{
+    animation-duration: 0.5s;
+}
+.loader .loading.two{
+    animation-duration: 0.6s;
+}
+.loader .loading.three{
+    animation-duration: 0.7s;
+}
+@keyframes load {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.65);
+    }
+   
+}
